@@ -1,0 +1,8 @@
+---
+- name: hosts details
+  hosts: all
+  tasks:
+  - name: copy the file
+    copy:
+      src:
+      dest:

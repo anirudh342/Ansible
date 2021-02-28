@@ -1,0 +1,13 @@
+---
+- name: hosts details
+  hosts: all
+  tasks:
+  - name: installation of ngix server
+    yum:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - httpd
+      
+      
+   

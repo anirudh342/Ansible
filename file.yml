@@ -1,0 +1,28 @@
+---
+- name: host details
+  hosts: all
+  tasks:
+  - name: file module to create file
+    file:
+      path: /tmp/"{{ item }}"
+      state: touch
+      owner: root
+      mode: 066
+    with_items:
+      - file1
+      - file2
+      - file3
+      - file4
+- name: file module to create directory
+    file:
+      path: /tmp/"{{ item }}"
+      state: directory
+      ower: root
+      mode: 655
+    with_items:
+      - file1
+      - file2
+      - file3
+      - file4
+
+   
