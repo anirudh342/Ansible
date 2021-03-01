@@ -1,0 +1,10 @@
+---
+- name: hosts details
+  hosts: all
+  tasks:
+  - name: make the small changes in the file
+    lineinfile:
+      path: /etc/hosts
+      regexp: ^10.0.0.2
+      line: 10.0.0.4 client.com client "\n"
+            10.0.0.3 server.com server
